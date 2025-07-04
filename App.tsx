@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import type { RootStackParamList } from './src/IFilme';
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+
+import TelaInicial from './pages/TelaInicial';
+import DetalhesFilme from './pages/DetalhesFilme';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="TelaInicial">
+        <Stack.Screen name="TelaInicial" component={TelaInicial} options={{ title: 'Buscar Filme' }} />
+        <Stack.Screen name="DetalhesFilme" component={DetalhesFilme} options={{ title: 'Detalhes' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
