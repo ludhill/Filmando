@@ -1,15 +1,9 @@
-
 export type FilmeResumo = {
   Title: string;
   Year: string;
   imdbID: string;
   Type: string;
   Poster: string;
-};
-
-export type Filmes = {
-  Title: string;
-  // ... todos os campos detalhados
 };
 
 export type Avaliacao = {
@@ -43,9 +37,4 @@ export type Filme = {
   Production?: string;
   Website?: string;
   Response?: string;
-};
-
-export type RootStackParamList = {
-  TelaInicial: undefined;
-  DetalhesFilme: { imdbID: string };
 };

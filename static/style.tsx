@@ -1,11 +1,24 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const largura = Dimensions.get('window').width;
+const margem = 16;
+const colunas = 2;
+const larguraCartao = (largura - margem * (colunas + 1)) / colunas;
 
 export const estilos = StyleSheet.create({
+  labelBusca: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
+    alignSelf: 'center',
+  },
+
   container: {
+    flex: 1,
+    backgroundColor: '#fff',
     paddingTop: 40,
     paddingBottom: 80,
-    backgroundColor: '#fff',
-    alignItems: 'center',
   },
   entradaTexto: {
     borderWidth: 1,
@@ -15,10 +28,12 @@ export const estilos = StyleSheet.create({
     width: '90%',
     borderRadius: 6,
     marginBottom: 20,
+    alignSelf: 'center',
   },
   cartao: {
-    width: '90%',
-    padding: 16,
+    width: larguraCartao,
+    margin: margem / 2,
+    padding: 12,
     borderRadius: 10,
     backgroundColor: '#f8f8f8',
     shadowColor: '#000',
@@ -29,20 +44,20 @@ export const estilos = StyleSheet.create({
     alignItems: 'center',
   },
   imagemPoster: {
-    width: 220,
-    height: 320,
+    width: '100%',
+    height: 200,
     borderRadius: 8,
     marginBottom: 12,
   },
   titulo: {
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#333',
     marginBottom: 4,
   },
   subtitulo: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#666',
     marginBottom: 6,
     textAlign: 'center',
@@ -76,11 +91,13 @@ export const estilos = StyleSheet.create({
     fontSize: 13,
     color: '#666',
     marginTop: 4,
+    textAlign: 'center',
   },
   avaliacoes: {
     fontSize: 13,
     marginTop: 8,
     fontWeight: 'bold',
     color: '#000',
-  }
+    textAlign: 'center',
+  },
 });
