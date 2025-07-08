@@ -25,7 +25,7 @@ Aplicativo mobile desenvolvido com **React Native + Expo** que permite buscar fi
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/filmando.git
+git clone https://github.com/ludhill/filmando.git
 cd filmando
 npm i
 npx expo start --clear
