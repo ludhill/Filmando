@@ -19,6 +19,8 @@ export const estilos = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: 40,
     paddingBottom: 80,
+    alignItems: 'center',       
+    justifyContent: 'flex-start'
   },
   entradaTexto: {
     borderWidth: 1,
@@ -42,11 +44,12 @@ export const estilos = StyleSheet.create({
     shadowRadius: 6,
     elevation: 5,
     alignItems: 'center',
+    alignSelf: 'center', 
   },
   imagemPoster: {
-    width: '100%',
-    height: 200,
-    borderRadius: 8,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     marginBottom: 12,
   },
   titulo: {
