@@ -27,5 +27,7 @@ Aplicativo mobile desenvolvido com **React Native + Expo** que permite buscar fi
 ```bash
 git clone https://github.com/ludhill/filmando.git
 cd filmando
+caso esteja no Camara:
+git checkout Camara
 npm i
 npx expo start --clear
