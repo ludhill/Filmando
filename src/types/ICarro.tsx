@@ -1,3 +1,9 @@
+export interface Carro {
+  id?: number;
+  modelo: string;
+  preco: number;
+}
+
 export type CarroResumo = {
   id: number;
   modelo: string;

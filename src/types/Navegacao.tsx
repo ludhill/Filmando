@@ -1,4 +1,10 @@
 export type RootStackParamList = {
   TelaInicial: undefined;
-  DetalhesFilme: { titulo: string };
+  DetalhesCarro: { id: number };
+  InputCarro: undefined;
 };
+
+// export type RootStackParamList = {
+//   TelaInicial: undefined;
+//   DetalhesFilme: { titulo: string };
+// };
